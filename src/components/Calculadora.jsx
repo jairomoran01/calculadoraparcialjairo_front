@@ -29,7 +29,7 @@ function Calculadora() {
     };
 
     const handleSortAsc = () => {
-        fetch('http://calculadoraparcialjairo-back.vercel.app/v1/calculadora/sortAsc', {
+        fetch('https://calculadoraparcialjairo-back.vercel.app/v1/calculadora/sortAsc', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ numbers: selectedNumbers })
@@ -39,7 +39,7 @@ function Calculadora() {
     };
 
     const handleSortDesc = () => {
-        fetch('http://calculadoraparcialjairo-back.vercel.app/v1/calculadora/sortDesc', {
+        fetch('https://calculadoraparcialjairo-back.vercel.app/v1/calculadora/sortDesc', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ numbers: selectedNumbers })
@@ -50,7 +50,7 @@ function Calculadora() {
 
     const handleEquation = () => {
         const values = Object.fromEntries(numbers.map(item => [item.letter, Number(item.value)]));
-        fetch('http://calculadoraparcialjairo-back.vercel.app/v1/calculadora/equation', {
+        fetch('https://calculadoraparcialjairo-back.vercel.app/v1/calculadora/equation', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ equation, values })
